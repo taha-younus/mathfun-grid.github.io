@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Is Fun</title>
+    <style>
+        body{
+            background-image:url('./img/math-games.png') ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .h1{
+            /* position: relative;
+            top: -200px; */
+            display: inline;
+            color: rgba(239, 255, 15, 0.899);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px rgba(41, 41, 41, 0.722);
+            background-color: rgba(0, 255, 255, 0.575);
+            border-radius: 5px;
+            padding: 10px;
+            /* margin-top: -150px; */
+        }
+        .container{
+            padding: 80px 50px;
+            border: 2px solid rgba(0, 0, 0, 0.443);
+            display: grid;
+            grid-gap: 13px;
+            grid-template-columns: auto auto auto;
+            border-radius: 15px;
+            background-color: rgba(0, 255, 255, 0.734);
+            margin: auto;
+            width: 80vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.685);
+            
+        }
+        .boxs{
+            border: 2px solid rgba(255, 255, 255, 0.584);
+            padding: 10px 10px;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.685);
+            display: flex;
+
+        }
+
+        .box-13{
+            position: relative;
+            left: 160px;
+        }
+
+        .box-14{
+            position: relative;
+            left: 172px;
+        }
+
+        span.text{
+            position: absolute;
+            left: 77%;
+            top: 8%;
+        }
+
+        @media only screen and (max-width:928px){
+            span.text{
+                text-wrap: wrap;
+                margin: auto;
+                left: 50%;
+
+
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+
+            .boxs{
+                display: flex;
+                text-wrap: wrap;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .box-13{
+            position: relative;
+            left: 0px;
+        }
+
+        .box-14{
+            position: relative;
+            left:0px;
+        }
+
+        .box-1{
+            padding: 36px 20px;
+        }
+        }
+
+      
+    </style>
+</head>
+<body>
+    <span class="h1">RESPONSIVE-GRID-LAYOUT</span>
+    <div class="container">
+        <div class="boxs box-1"><span class="text">Index</span></div>
+        <div class="boxs box-2"><img src="https://cdn-icons-png.flaticon.com/512/1925/1925168.png" width="50px" alt=""><span class="text">Data</span></div>
+        <div class="boxs box-3"><img src="https://cdn-icons-png.flaticon.com/512/2322/2322659.png" width="50px" alt=""><span class="text">Geometry</span></div>
+        <div class="boxs box-4"><img src="https://cdn-icons-png.flaticon.com/512/2861/2861731.png" width="50px" alt=""><span class="text">Numbers</span></div>
+        <div class="boxs box-5"><img src="https://www.shutterstock.com/image-vector/head-puzzle-piece-icon-brainstorming-600nw-2277727717.jpg" width="60px" alt=""><span class="text">Puzzles</span></div>
+        <div class="boxs box-6"><img src="https://cdn-icons-png.flaticon.com/512/536/536113.png" width="50px" alt=""><span class="text">Money</span></div>
+        <div class="boxs box-7"><img src="https://content.presentermedia.com/files/clipart/00013000/13847/algebra_square_icon_800_wht.jpg" width="50px" alt=""><span class="text">Algebra</span></div>
+        <div class="boxs box-8"><img src="https://play-lh.googleusercontent.com/ohzbrYjvNf8oSuEwwVt2fb4Os0mFmYAHCwU5kDSvNKtTos07QnrwM9N_g5ACY8qQnh8" width="50px" alt=""><span class="text">Calculus</span></div>
+        <div class="boxs box-9"><img src="data:image/png;base64,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" width="50px" alt=""><span class="text">Physics</span></div>
+        <div class="boxs box-10"><img src="https://cdn-icons-png.flaticon.com/512/2656/2656506.png" width="50px" alt=""><span class="text">Games</span></div>
+        <div class="boxs box-11"><img src="https://play-lh.googleusercontent.com/IdE2qWKdDld6pwxIHJd-yCjBViBtUwTTqHEZd4fLPmfeX0Xogh9QUMPduTfBid90wA" width="50px" alt=""><span class="text">Dictionary</span></div>
+        <div class="boxs box-12"><img src="https://cdn-icons-png.flaticon.com/512/6517/6517897.png" width="50px" alt=""><span class="text">Worksheets</span></div>
+        <div class="boxs box-13"><img src="https://www.hsph.harvard.edu/obesity-prevention-source/wp-content/uploads/sites/56/2012/10/measuring_obesity.jpg" width="95px" alt=""><span class="text">Meaurement</span></div>
+        <div class="boxs box-14"><img src="https://cdn0.iconfinder.com/data/icons/school-life-solid/128/activity_play_learning_education_school_girl_boy_student_children_enjoy-512.png" width="50px" alt=""><span class="text">Activities</span></div>
+    </div>
+</body>
+</html>
